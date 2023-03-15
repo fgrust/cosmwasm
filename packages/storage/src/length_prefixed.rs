@@ -6,6 +6,9 @@
 
 /// Calculates the raw key prefix for a given namespace as documented
 /// in https://github.com/webmaster128/key-namespacing#length-prefixed-keys
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub fn to_length_prefixed(namespace: &[u8]) -> Vec<u8> {
     let mut out = Vec::with_capacity(namespace.len() + 2);
     out.extend_from_slice(&encode_length(namespace));
@@ -15,6 +18,9 @@ pub fn to_length_prefixed(namespace: &[u8]) -> Vec<u8> {
 
 /// Calculates the raw key prefix for a given nested namespace
 /// as documented in https://github.com/webmaster128/key-namespacing#nesting
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub fn to_length_prefixed_nested(namespaces: &[&[u8]]) -> Vec<u8> {
     let mut size = 0;
     for &namespace in namespaces {

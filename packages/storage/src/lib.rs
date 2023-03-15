@@ -1,3 +1,5 @@
+#![allow(deprecated)]
+
 mod bucket;
 mod length_prefixed;
 mod namespace_helpers;

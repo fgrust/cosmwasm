@@ -6,6 +6,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Deprecated
+
+- cosmwasm-storage: All exports are deprecated because this crate will be
+  removed with CosmWasm 2.0 ([#1596]).
+
+[#1596]: https://github.com/CosmWasm/cosmwasm/issues/1596
+
 ## [1.2.2] - 2023-03-08
 
 ### Added

@@ -14,6 +14,9 @@ use crate::type_helpers::deserialize_kv;
 use crate::type_helpers::{may_deserialize, must_deserialize};
 
 /// An alias of Bucket::new for less verbose usage
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub fn bucket<'a, T>(storage: &'a mut dyn Storage, namespace: &[u8]) -> Bucket<'a, T>
 where
     T: Serialize + DeserializeOwned,
@@ -22,6 +25,9 @@ where
 }
 
 /// An alias of ReadonlyBucket::new for less verbose usage
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub fn bucket_read<'a, T>(storage: &'a dyn Storage, namespace: &[u8]) -> ReadonlyBucket<'a, T>
 where
     T: Serialize + DeserializeOwned,
@@ -29,6 +35,9 @@ where
     ReadonlyBucket::new(storage, namespace)
 }
 
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub struct Bucket<'a, T>
 where
     T: Serialize + DeserializeOwned,
@@ -110,6 +119,9 @@ where
     }
 }
 
+#[deprecated(
+    note = "The crate cosmwasm-storage is unmaintained and will be removed in CosmWasm 2.0. Please consider migrating to cw-storage-plus or simple cosmwasm-std storage calls."
+)]
 pub struct ReadonlyBucket<'a, T>
 where
     T: Serialize + DeserializeOwned,

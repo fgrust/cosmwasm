@@ -6,6 +6,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+- Add `Api::trace` for emitting trace messages during development.
+
 ## [1.2.3] - 2023-03-22
 
 - cosmwasm-vm: Use saturating increments for `Stats` fields to ensure we don't

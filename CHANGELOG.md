@@ -6,6 +6,9 @@ and this project adheres to
 
 ## [Unreleased]
 
+- Add `Api::debug_with_gas` for emitting debug messages with gas information
+  during development.
+
 ## [1.2.3] - 2023-03-22
 
 - cosmwasm-vm: Use saturating increments for `Stats` fields to ensure we don't
